@@ -10,7 +10,7 @@ The weather service that will retrieve daily information for number of cities in
 
 ### Prerequisites
 
-- Visual Studio 2020
+- Visual Studio 2022
 - .Net 6.0
 
 ## Assumptions

@@ -6,3 +6,4 @@ global using WeatherService.Common;
 global using WeatherService.Entities;
 global using WeatherService.Repository;
 global using WeatherService.Repository.Interfaces;
+global using Microsoft.Extensions.Configuration;

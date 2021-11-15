@@ -7,6 +7,7 @@ The weather service that will retrieve daily information for number of cities in
 - Take the clone of the project in your local machine
 - Open the solution in Visual Studio preferably Visual Studio 2022
 - Build the solution and it should restore the nuget packages and succeed.
+- Ensure the ApiKey is added in the user secrets
 
 ### Prerequisites
 

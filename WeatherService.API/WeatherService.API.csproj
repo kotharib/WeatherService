@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Label="FineCodeCoverage">
+    <Enabled>
+      True
+    </Enabled>
+    <Exclude>
+      [ThirdParty.*]*
+      [FourthParty]*
+    </Exclude>
+    <Include>
+      [*]*
+    </Include>
+    <ExcludeByFile>
+      **/Migrations/*
+      **/Hacks/*.cs
+    </ExcludeByFile>
+    <ExcludeByAttribute>
+      MyCustomExcludeFromCodeCoverage
+    </ExcludeByAttribute>
+    <IncludeTestAssembly>
+      True
+    </IncludeTestAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Files\**" />
+    <Content Remove="Files\**" />
+    <EmbeddedResource Remove="Files\**" />
+    <None Remove="Files\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherService.Business\WeatherService.Business.csproj" />
+    <ProjectReference Include="..\WeatherService.Common\WeatherService.Common.csproj" />
+  </ItemGroup>
+
+</Project>

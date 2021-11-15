@@ -1,7 +1,10 @@
-﻿namespace WeatherService.API.Controllers
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace WeatherService.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/")]
     [ApiController]
+    [AllowAnonymous]
     public class WeatherDataController : ControllerBase
     {
         private readonly ICityWeatherService _cityWeatherService;
